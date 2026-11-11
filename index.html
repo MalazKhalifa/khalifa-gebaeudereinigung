@@ -71,21 +71,30 @@ nav{
 }
     
 .brand{
-    color:var(--gold);
+    display:flex;
+    align-items:center;
+    gap:12px;
     text-decoration:none;
+}
+
+.brand-text{
+    display:flex;
+    align-items:baseline;
+    gap:7px;
+    white-space:nowrap;
+}
+
+.brand-text strong{
+    color:#d4af37;
     font-size:22px;
     font-weight:800;
-    letter-spacing:.5px;
 }
 
-.brand span{
-    display:block;
-    color:#ddd;
-    font-size:11px;
-    letter-spacing:3px;
-    font-weight:500;
+.brand-text span{
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
 }
-
 nav ul{
     list-style:none;
     display:flex;
@@ -630,8 +639,7 @@ footer p{
 
            <a class="brand" href="#start">
     <img src="logo.png" alt="Khalifa Gebäudereinigung Logo" class="brand-logo">
-
-    <div class="brand-name">
+    <div class="brand-text">
         <strong>KHALIFA</strong>
         <span>Gebäudereinigung</span>
     </div>
