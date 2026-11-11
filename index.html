@@ -1,16 +1,1225 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<title>Khalifa Gebäudereinigung</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khalifa Gebäudereinigung Berlin | Professionelle Reinigung</title>
+
+<meta name="description" content="Khalifa Gebäudereinigung - Professionelle Büroreinigung, Treppenhausreinigung, Unterhaltsreinigung und Grundreinigung in Berlin und Umgebung.">
+
+<style>
+
+:root{
+    --gold:#d4af37;
+    --gold2:#f1cf68;
+    --black:#050505;
+    --dark:#101010;
+    --dark2:#171717;
+    --white:#ffffff;
+    --gray:#b7b7b7;
+    --green:#25D366;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--black);
+    color:white;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.96);
+    border-bottom:1px solid rgba(212,175,55,.4);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.brand{
+    color:var(--gold);
+    text-decoration:none;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.brand span{
+    display:block;
+    color:#ddd;
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:500;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+nav ul a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav ul a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.58)),
+    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1800&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:760px;
+    padding:70px 0;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,76px);
+    line-height:1.02;
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:670px;
+    font-size:20px;
+    color:#e1e1e1;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:54px;
+    padding:14px 25px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#050505;
+}
+
+.btn-gold:hover{
+    background:var(--gold2);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.6);
+    background:rgba(0,0,0,.3);
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+.trust{
+    margin-top:38px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.trust span{
+    border:1px solid rgba(212,175,55,.33);
+    background:rgba(10,10,10,.7);
+    padding:9px 13px;
+    border-radius:50px;
+    font-size:14px;
+}
+
+/* GENERAL */
+
+section{
+    padding:95px 0;
+}
+
+.section-dark{
+    background:#0b0b0b;
+}
+
+.section-header{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 50px;
+}
+
+.section-header small{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.section-header h2{
+    font-size:clamp(34px,5vw,48px);
+    margin-top:8px;
+}
+
+.section-header p{
+    color:var(--gray);
+    margin-top:10px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.service{
+    position:relative;
+    min-height:390px;
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    border:1px solid #272727;
+}
+
+.service img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    inset:0;
+    transition:.5s;
+}
+
+.service:hover img{
+    transform:scale(1.04);
+}
+
+.service::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 25%,rgba(0,0,0,.93));
+}
+
+.service-content{
+    position:relative;
+    z-index:2;
+    padding:30px;
+}
+
+.service h3{
+    color:var(--gold);
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#e0e0e0;
+}
+
+/* WHY */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:var(--dark2);
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:30px;
+}
+
+.why-icon{
+    color:var(--gold);
+    font-size:31px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:var(--gray);
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    height:520px;
+    display:block;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.about-content small{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.about-content h2{
+    font-size:clamp(34px,5vw,48px);
+    margin:10px 0 20px;
+}
+
+.about-content p{
+    color:#c9c9c9;
+    margin-bottom:18px;
+}
+
+.checks{
+    list-style:none;
+    margin-top:25px;
+}
+
+.checks li{
+    margin:12px 0;
+}
+
+.checks li::before{
+    content:"✓";
+    color:var(--gold);
+    font-weight:bold;
+    margin-right:12px;
+}
+
+/* AREA */
+
+.area{
+    text-align:center;
+}
+
+.area-box{
+    max-width:900px;
+    margin:auto;
+    padding:50px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#171717,#090909);
+    border:1px solid rgba(212,175,55,.35);
+}
+
+.area-box h2{
+    color:var(--gold);
+    font-size:40px;
+}
+
+.area-box p{
+    color:#ccc;
+    margin:15px auto 25px;
+    max-width:650px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:28px;
+}
+
+.contact-info,
+.contact-form{
+    background:#131313;
+    border:1px solid #282828;
+    border-radius:18px;
+    padding:35px;
+}
+
+.contact-info h3,
+.contact-form h3{
+    color:var(--gold);
+    font-size:27px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    margin:20px 0;
+}
+
+.contact-item strong{
+    display:block;
+    color:white;
+}
+
+.contact-item a{
+    color:#cfcfcf;
+    text-decoration:none;
+}
+
+.contact-item a:hover{
+    color:var(--gold);
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:13px;
+    border:1px solid #343434;
+    border-radius:8px;
+    background:#090909;
+    color:white;
+    font-size:16px;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:var(--gold);
+}
+
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+button{
+    border:0;
+    cursor:pointer;
+}
+
+/* LEGAL */
+
+.legal{
+    max-width:900px;
+    margin:auto;
+}
+
+.legal h2{
+    color:var(--gold);
+    font-size:34px;
+    margin-bottom:22px;
+}
+
+.legal h3{
+    color:var(--gold2);
+    margin:25px 0 8px;
+}
+
+.legal p,
+.legal li{
+    color:#c6c6c6;
+}
+
+.legal ul{
+    margin-left:22px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#030303;
+    border-top:1px solid rgba(212,175,55,.3);
+    padding:45px 0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+}
+
+footer h3{
+    color:var(--gold);
+}
+
+footer p{
+    color:#999;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+}
+
+.footer-links a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:var(--gold);
+}
+
+/* FLOAT BUTTONS */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:1200;
+}
+
+.float-btn{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    padding:13px 18px;
+    border-radius:50px;
+    box-shadow:0 5px 25px rgba(0,0,0,.35);
+}
+
+.call{
+    background:var(--gold);
+    color:black;
+}
+
+.wa{
+    background:var(--green);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    nav ul{
+        display:none;
+    }
+
+    .services,
+    .why-grid,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:82vh;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .service{
+        min-height:340px;
+    }
+
+    .about-image img{
+        height:360px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .area-box{
+        padding:35px 22px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .floating{
+        right:12px;
+        bottom:12px;
+    }
+
+    .float-btn{
+        padding:11px 15px;
+        font-size:14px;
+    }
+
+}
+
+</style>
 </head>
 
-<body style="background:black;color:white;text-align:center;padding-top:100px;">
+<body>
 
-<h1>Khalifa Gebäudereinigung Berlin</h1>
+<header>
+    <div class="container">
+        <nav>
+
+            <a class="brand" href="#start">
+                KHALIFA
+                <span>GEBÄUDEREINIGUNG</span>
+            </a>
+
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+
+            <a class="btn btn-gold" href="tel:+4917662478458">
+                Jetzt anrufen
+            </a>
+
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="start">
+
+<div class="container">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Berlin & Umgebung
+        </div>
+
+        <h1>
+            Sauberkeit, auf die Sie sich
+            <span>verlassen können.</span>
+        </h1>
+
+        <p>
+            Professionelle Gebäudereinigung für Büros,
+            Treppenhäuser, Gewerbe und Immobilien in Berlin
+            und Umgebung.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="btn btn-gold" href="tel:+4917662478458">
+                ☎ Jetzt anrufen
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://wa.me/4917662478458">
+                WhatsApp
+            </a>
+
+            <a class="btn btn-outline" href="#kontakt">
+                Angebot anfordern
+            </a>
+
+        </div>
+
+        <div class="trust">
+            <span>✓ Zuverlässig</span>
+            <span>✓ Gründlich</span>
+            <span>✓ Flexible Termine</span>
+            <span>✓ Persönlicher Service</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="leistungen" class="section-dark">
+
+<div class="container">
+
+<div class="section-header">
+
+    <small>Unsere Leistungen</small>
+
+    <h2>Professionelle Reinigung in Berlin</h2>
+
+    <p>
+        Individuelle Reinigungslösungen für Unternehmen,
+        Immobilien und private Auftraggeber.
+    </p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="service">
+
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=80"
+alt="Büroreinigung">
+
+<div class="service-content">
+
+<h3>Büroreinigung</h3>
 
 <p>
-Willkommen bei unserer Website
+Saubere und gepflegte Arbeitsplätze für ein
+professionelles Arbeitsumfeld.
 </p>
+
+</div>
+
+</div>
+
+
+<div class="service">
+
+<img
+src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1100&q=80"
+alt="Treppenhausreinigung">
+
+<div class="service-content">
+
+<h3>Treppenhausreinigung</h3>
+
+<p>
+Regelmäßige und gründliche Reinigung von
+Treppenhäusern und Eingangsbereichen.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service">
+
+<img
+src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1100&q=80"
+alt="Unterhaltsreinigung">
+
+<div class="service-content">
+
+<h3>Unterhaltsreinigung</h3>
+
+<p>
+Zuverlässige regelmäßige Reinigung nach einem
+individuell abgestimmten Reinigungsplan.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="service">
+
+<img
+src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1100&q=80"
+alt="Grundreinigung">
+
+<div class="service-content">
+
+<h3>Grundreinigung</h3>
+
+<p>
+Intensive Reinigung für besonders gründliche
+Sauberkeit und gepflegte Oberflächen.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- WHY -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header">
+
+<small>Warum Khalifa?</small>
+
+<h2>Sauberkeit mit persönlichem Service</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">✓</div>
+
+<h3>Zuverlässigkeit</h3>
+
+<p>
+Klare Absprachen und zuverlässige Durchführung
+der vereinbarten Reinigungsarbeiten.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">★</div>
+
+<h3>Gründliche Arbeit</h3>
+
+<p>
+Wir legen Wert auf saubere Ergebnisse und
+sorgfältige Ausführung.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">☎</div>
+
+<h3>Direkter Kontakt</h3>
+
+<p>
+Persönliche Kommunikation und schnelle
+Erreichbarkeit für unsere Kunden.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="ueber-uns" class="section-dark">
+
+<div class="container">
+
+<div class="about">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85"
+alt="Professionelle Gebäudereinigung">
+
+</div>
+
+
+<div class="about-content">
+
+<small>Über uns</small>
+
+<h2>Khalifa Gebäudereinigung</h2>
+
+<p>
+Khalifa Gebäudereinigung bietet professionelle
+Reinigungsdienstleistungen in Berlin und Umgebung.
+</p>
+
+<p>
+Unser Ziel ist ein zuverlässiger, persönlicher Service
+und eine gründliche Reinigung, die zu den Anforderungen
+unserer Kunden passt.
+</p>
+
+<ul class="checks">
+
+<li>Büroreinigung</li>
+<li>Treppenhausreinigung</li>
+<li>Unterhaltsreinigung</li>
+<li>Grundreinigung</li>
+<li>Berlin & Umgebung</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AREA -->
+
+<section>
+
+<div class="container area">
+
+<div class="area-box">
+
+<h2>Berlin & Umgebung</h2>
+
+<p>
+Sie suchen eine zuverlässige Gebäudereinigung
+in Berlin? Kontaktieren Sie uns für eine persönliche
+Absprache und ein individuelles Angebot.
+</p>
+
+<a class="btn btn-gold" href="tel:+4917662478458">
+☎ +49 176 62478458
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="kontakt" class="section-dark">
+
+<div class="container">
+
+<div class="section-header">
+
+<small>Kontakt</small>
+
+<h2>Jetzt kostenlos anfragen</h2>
+
+<p>
+Kontaktieren Sie uns telefonisch, per WhatsApp
+oder per E-Mail.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>Khalifa Gebäudereinigung</h3>
+
+<div class="contact-item">
+
+<strong>Telefon</strong>
+
+<a href="tel:+4917662478458">
++49 176 62478458
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>WhatsApp</strong>
+
+<a href="https://wa.me/4917662478458">
+Nachricht senden
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>E-Mail</strong>
+
+<a href="mailto:info@khalifa.gebaeudereinigung.de">
+info@khalifa.gebaeudereinigung.de
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>Adresse</strong>
+
+Gartenfelder Str. 131<br>
+13599 Berlin
+
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>Angebot anfordern</h3>
+
+<form action="mailto:info@khalifa.gebaeudereinigung.de"
+method="post"
+enctype="text/plain">
+
+<input
+type="text"
+name="Name"
+placeholder="Ihr Name"
+required>
+
+<input
+type="tel"
+name="Telefon"
+placeholder="Telefonnummer">
+
+<input
+type="email"
+name="Email"
+placeholder="E-Mail"
+required>
+
+<input
+type="text"
+name="Objekt"
+placeholder="Art des Objekts">
+
+<textarea
+name="Nachricht"
+placeholder="Wie können wir Ihnen helfen?"
+required></textarea>
+
+<button class="btn btn-gold" type="submit">
+Anfrage senden
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMPRESSUM -->
+
+<section id="impressum">
+
+<div class="container legal">
+
+<h2>Impressum</h2>
+
+<h3>Anbieter</h3>
+
+<p>
+Khalifa Gebäudereinigung<br>
+Malaz Khalefa<br>
+Gartenfelder Str. 131<br>
+13599 Berlin<br>
+Deutschland
+</p>
+
+<h3>Kontakt</h3>
+
+<p>
+Telefon:
+<a href="tel:+4917662478458" style="color:#d4af37;">
++49 176 62478458
+</a>
+<br>
+
+E-Mail:
+<a href="mailto:info@khalifa.gebaeudereinigung.de"
+style="color:#d4af37;">
+info@khalifa.gebaeudereinigung.de
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- DATENSCHUTZ -->
+
+<section id="datenschutz" class="section-dark">
+
+<div class="container legal">
+
+<h2>Datenschutzerklärung</h2>
+
+<h3>Verantwortliche Stelle</h3>
+
+<p>
+Khalifa Gebäudereinigung<br>
+Malaz Khalefa<br>
+Gartenfelder Str. 131<br>
+13599 Berlin<br>
+Deutschland
+</p>
+
+<p style="margin-top:12px;">
+E-Mail:
+info@khalifa.gebaeudereinigung.de
+</p>
+
+
+<h3>Allgemeine Hinweise</h3>
+
+<p>
+Wir behandeln personenbezogene Daten vertraulich
+und entsprechend den geltenden gesetzlichen
+Datenschutzvorschriften.
+</p>
+
+
+<h3>Kontaktaufnahme</h3>
+
+<p>
+Wenn Sie uns telefonisch oder per E-Mail kontaktieren,
+werden die von Ihnen übermittelten Angaben zur Bearbeitung
+Ihrer Anfrage verwendet.
+</p>
+
+
+<h3>Ihre Rechte</h3>
+
+<p>
+Im Rahmen der gesetzlichen Voraussetzungen können
+betroffene Personen insbesondere Rechte auf Auskunft,
+Berichtigung, Löschung, Einschränkung der Verarbeitung
+und Widerspruch geltend machen.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+
+<h3>Khalifa Gebäudereinigung</h3>
+
+<p>
+Berlin & Umgebung
+</p>
+
+<p>
+© Khalifa Gebäudereinigung
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#impressum">Impressum</a>
+
+<a href="#datenschutz">Datenschutz</a>
+
+<a href="#kontakt">Kontakt</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+<a
+class="float-btn call"
+href="tel:+4917662478458">
+☎ Anrufen
+</a>
+
+<a
+class="float-btn wa"
+href="https://wa.me/4917662478458">
+WhatsApp
+</a>
+
+</div>
+
 
 </body>
 </html>
